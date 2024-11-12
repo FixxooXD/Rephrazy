@@ -2,12 +2,14 @@ import Link from 'next/link'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Pen, Zap, Sparkles, Lightbulb } from 'lucide-react'
+import * as React from "react"
+import { ThemeSwitch } from '@/components/ThemeSwitch'
 
 export default function LandingPage() {
   return (
     <div className="flex flex-col min-h-screen">
       <header className="px-4 lg:px-6 h-14 flex items-center">
-        <Link className="flex items-center justify-center" href="#">
+        <Link className="flex items-center justify-center" href="/studio">
           <Pen className="h-6 w-6 mr-2" />
           <span className="font-bold">AI Writer</span>
         </Link>
@@ -21,6 +23,9 @@ export default function LandingPage() {
           <Link className="text-sm font-medium hover:underline underline-offset-4" href="#contact">
             Contact
           </Link>
+          
+          <ThemeSwitch />
+          
         </nav>
       </header>
       <main className="flex-1">
